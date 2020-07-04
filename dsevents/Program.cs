@@ -171,11 +171,16 @@ namespace dsevents
             events.Remove(elem);
             var uniques = events.Distinct().ToArray();
 
+            if (uniques.Length == 0)
+            {
+                Console.Write("No element was found");
+            }
 
             foreach (var str in uniques)
             {
-                Console.WriteLine(str);
+                Console.Write(str + " ");
             }
+            Console.WriteLine();
 
         }
 
